@@ -9,12 +9,12 @@
     <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="{{ url('/home') }}"><b>DSI</b>_Proyecto</a>
+            <a href="{{ url('/home') }}"><b>Sistema de Seguimiento de convenios</b>-</b>Nuevo Usuario</a>
         </div>
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ 'Tenemos algun problema' }}<br><br>
+                <strong>Error al generar registro!</strong> {{ 'Revise los siguientes problemas:' }}<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -24,7 +24,7 @@
         @endif
 
         <div class="register-box-body">
-            <p class="login-box-msg">{{ 'Registro de nuevo Mienbro' }}</p>
+            <p class="login-box-msg">{{ 'Registro de nuevo Miembro' }}</p>
             <form action="{{ url('/register') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
@@ -55,7 +55,7 @@
                     </div><!-- /.col -->
                     <div class="col-xs-6">
                         <div class="form-group">
-                            <button type="button" class="btn btn-block btn-flat" data-toggle="modal" data-target="#termsModal">{{ 'Acepto Terminos' }}</button>
+                            <button type="button" class="btn btn-block btn-flat" data-toggle="modal" data-target="#termsModal">{{ 'Acepto Terminos (ver)' }}</button>
                         </div>
                     </div><!-- /.col -->
                     <div class="col-xs-4 col-xs-push-1">
