@@ -31,10 +31,28 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
+            <li class="header">{{ trans('adminlte_lang::message.header') }}</li> <!--Perfil de usuario-->
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>
+            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('Home') }}</span></a></li>
+            <li class="treeview">
+                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('Convenios') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="Convenio/create">{{ trans('Registrar') }}</a></li>
+                    <li><a href="Convenio/index">{{ trans('Modificar') }}</a></li>
+                    <li><a href="#">{{ trans('Eliminar') }}</a></li>
+                    <li><a href="#">{{ trans('Asociar Insitucion') }}</a></li>
+                     <li><a href="#">{{ trans('Consultar Concenios') }}</a></li>
+                      <li><a href="#">{{ trans('Consultar Cordinadores') }}</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Parámetros') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Act.Convenios') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Institucion') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Documentos') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Publicacion') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Consultas') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Gestion') }}</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

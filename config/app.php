@@ -158,6 +158,9 @@ return [
         /*ALTE*/
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
 
+        /*Laravel Colective*/
+        Collective\Html\HtmlServiceProvider::class,
+
 
     ],
 
@@ -206,6 +209,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         /*Plantilla*/
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+
+        /*Laravel Colective*/
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
