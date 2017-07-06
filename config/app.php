@@ -157,6 +157,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         /*ALTE*/
         Acacha\AdminLTETemplateLaravel\Providers\AdminLTETemplateServiceProvider::class,
+        /*DomPDF*/
+        Barryvdh\DomPDF\ServiceProvider::class,
 
 
     ],
@@ -206,6 +208,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         /*Plantilla*/
         'AdminLTE' => Acacha\AdminLTETemplateLaravel\Facades\AdminLTE::class,
+        /*PDF*/
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
