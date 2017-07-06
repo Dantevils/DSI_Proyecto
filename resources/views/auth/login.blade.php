@@ -8,12 +8,12 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="{{ url('/home') }}"><b>DSI</b>_Proyecto</a>
+            <a href="{{ url('/home') }}"><b>Ingresar</b>-Sistema de seguimiento de Convenios</a>
         </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> {{ 'Tenemos algun problema' }}<br><br>
+            <strong>Whoops!</strong> {{ 'Error-Tenemos algun problema' }}<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -23,7 +23,7 @@
     @endif
 
     <div class="login-box-body">
-    <p class="login-box-msg"> {{ 'Inicio de seccion' }} </p>
+    <p class="login-box-msg"> {{ 'Inicio de sesion' }} </p>
     <form action="{{ url('/login') }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="form-group has-feedback">
