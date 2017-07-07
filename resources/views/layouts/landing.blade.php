@@ -23,7 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta name="twitter:site" content="@acachawiki" />
     <meta name="twitter:creator" content="@acacha1" />
 
-    <title>{{ 'DSI'}}</title>
+    <title>{{ 'Convenios'}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
@@ -51,18 +51,18 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>DSI Proyecto</b></a>
+            <a class="navbar-brand" href="#"><b>Universidad de Macondo - Convenios</b></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home" class="smoothScroll">{{'Home'}}</a></li>
                 <li><a href="#desc" class="smoothScroll">{{'Descripcion'}}</a></li>
-                <li><a href="#contact" class="smoothScroll">{{ 'Contactos' }}</a></li>
+                <li><a href="#contact" class="smoothScroll">{{ 'Contacto' }}</a></li>
                 <li><a href="#c" class="smoothScroll">{{ 'Desarrolladores' }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">{{'Iniciar seccion'}}</a></li>
+                    <li><a href="{{ url('/login') }}">{{'Iniciar sesión'}}</a></li>
                     <li><a href="{{ url('/register') }}">{{ 'Registrar' }}</a></li>
                 @else
                     <li><a href="/home">{{ Auth::user()->name }}</a></li>
@@ -76,7 +76,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 
 <section id="home" name="home"></section>
 <div>
-<img class="img-responsive" src="{{ asset('/img/campus.jpg') }}" alt="Banner Image">
+<img class="img-responsive" src="{{ asset('/img/DSC_0625.jpg') }}" alt="Banner Image">
 </div>
 
 
@@ -88,19 +88,18 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="col-lg-5">
             <h3>{{ "Direccion" }}</h3>
             <p>
-                Avenida samuel bambach,<br/>
-                Coelemu,<br/>
-                254<br/>
-                Concepcion
+                Avenida Paicavi,<br/>
+                Concepcion,<br/>
+                2121
             </p>
         </div>
         <div class="col-lg-7">
             <h3>{{ "Contacto" }}</h3>
             <p>
-                Fono:  (56-42) 2970367,<br/>
-                Rut:  77.834.330-4,<br/>
-                Guiro:  Obras de ingenierías<br/>
-                Representante legal:  Paola Lamas<br/>
+                Fono:  (56-41) 2570034,<br/>
+                Rut:  75.834.330-1,<br/>
+                Universidad de Macondo<br/>
+                Representante legal:  Miguel Ossandon<br/>
             </p>
         </div>
 
@@ -111,7 +110,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <b>Desarrolladores</b></a>. {{ 'Dantevils' }}.<br/>
+            <b>Desarrolladores</b></a>. {{ 'Dantevils, Frantanza, Jacobiyo, Pauli, Omvega, Pats ' }}.<br/>
         </p>
     </div>
 </div>
