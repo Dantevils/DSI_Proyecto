@@ -59,6 +59,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <li><a href="#desc" class="smoothScroll">{{'Descripcion'}}</a></li>
                 <li><a href="#contact" class="smoothScroll">{{ 'Contactos' }}</a></li>
                 <li><a href="#c" class="smoothScroll">{{ 'Desarrolladores' }}</a></li>
+                <li><a href="#i" class="smoothScroll">{{ 'Objetivos' }}</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -105,6 +106,14 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         </div>
 
 
+    </div>
+</div>
+
+<div id="i">
+    <div class="container">
+        <p>
+            <b>Objetivo</b></a>. {{ 'Objetivo Proyecto' }}.<br/>
+        </p>
     </div>
 </div>
 
