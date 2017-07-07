@@ -59,6 +59,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 <li><a href="#desc" class="smoothScroll">{{'Descripcion'}}</a></li>
                 <li><a href="#contact" class="smoothScroll">{{ 'Contacto' }}</a></li>
                 <li><a href="#c" class="smoothScroll">{{ 'Desarrolladores' }}</a></li>
+                <li><a href="#actual" class="smoothScroll">{{ 'Actualizaciones' }}</a></li>
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::guest())
@@ -102,6 +104,12 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                 Representante legal:  Miguel Ossandon<br/>
             </p>
         </div>
+         <div class="col-lg-5">
+            <h3>{{"Cita" }}</h3>
+            <p>
+                Un convenio es un acuerdo <br/>de voluntades, una convención<br/> o un contrato.,<br/>
+            </p>
+        </div>
 
 
     </div>
@@ -110,7 +118,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <b>Desarrolladores</b></a>. {{ 'Dantevils, Frantanza, Jacobiyo, Pauli, Omvega, Pats ' }}.<br/>
+            <b>Desarrolladores</b></a>. {{ 'Dantevils, Frantanza, Jacobiyo, Pauli, Omvega, Camilo ' }}.<br/>
         </p>
     </div>
 </div>
