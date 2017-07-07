@@ -34,7 +34,7 @@
 								<tbody>
 									@foreach($var as $varlist)
 									<tr>
-										<td>{!! $varlist->id_con !!}</td>
+										<td>{!! $varlist->id !!}</td>
 										<td>{!! $varlist->nombre_con !!}</td>
 										<td>{!! $varlist->tipo_con !!}</td>
 										<td>{!! $varlist->area_con !!}</td>
@@ -47,12 +47,12 @@
 										<td>
 											
 											
-										<!--Boton Editar-->
-										<a href="" class="btn btn-warning">Editar<span class="glyphicon glyphicon-copy"></span></a>
+										<!--Boton Editar y asignacion de ruta-->
+										<a href="{{ route('Convenio.edit',$varlist->id)}}" class="btn btn-warning">Editar<span class="glyphicon glyphicon-copy"></span></a>
 
 
 										<!--Boton Editar-->
-										<a href="" onclick="return confirm('¿Seguro que desea eliminar?')" class="btn btn-danger">Eliminar<span class="glyphicon glyphicon-trash"></span></a>
+										<a href="{{ route('destroyConvenio.destroy',$varlist->id) }}" onclick="return confirm('¿Seguro que desea eliminar?')" class="btn btn-danger">Eliminar<span class="glyphicon glyphicon-trash"></span></a>
 										
 										</td>
 									</tr>

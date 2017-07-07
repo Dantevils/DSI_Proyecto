@@ -16,7 +16,7 @@ class CreateConveniosTable extends Migration
 
 
          Schema::create('convenios', function (Blueprint $table) {
-            $table->increments('id_con');/*Identificador de convenio unico*/
+            $table->increments('id');/*Identificador de convenio unico*/
             $table->string('tipo_con');/*Tipo de convenio*/
             $table->string('area_con');/*Area de convenio*/
             $table->string('estado_con');/*Estado de convenio*/

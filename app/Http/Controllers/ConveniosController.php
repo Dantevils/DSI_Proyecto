@@ -18,7 +18,7 @@ class ConveniosController extends Controller
     {
         //
          //Este metodo lo utilizaremos para mostrar un listado de los convenios.
-        $var = Convenio::orderBy('id_con','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
+        $var = Convenio::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
         return view('convenio.index',compact('var'));
     }
 
@@ -44,7 +44,7 @@ class ConveniosController extends Controller
         //
          $var = new Convenio($request->all());
         $var->save();
-        return redirect()->route('convenio.index');
+        return redirect()->route('Convenio.index');
     }
 
     /**
@@ -67,6 +67,8 @@ class ConveniosController extends Controller
     public function edit($id)
     {
         //
+        $varConvenio = Convenio::findOrFail($id);
+        return view('convenio.edit',array('varConvenio'=>$varConvenio));
     }
 
     /**
@@ -79,6 +81,10 @@ class ConveniosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $varConvenio = Convenio::find($id);
+        $varConvenio->fill($request->all());
+        $varConvenio->save();
+        return redirect()->route('Convenio.index');
     }
 
     /**
@@ -90,5 +96,8 @@ class ConveniosController extends Controller
     public function destroy($id)
     {
         //
+        $varConvenio = Convenio::findOrFail($id);
+        $varConvenio->delete();
+        return redirect()->route('Convenio.index');
     }
 }

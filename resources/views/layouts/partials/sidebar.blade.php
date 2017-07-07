@@ -37,8 +37,8 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>{{ trans('Convenios') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="Convenio/create">{{ trans('Registrar') }}</a></li>
-                    <li><a href="Convenio/index">{{ trans('Modificar') }}</a></li>
+                    <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
                     <li><a href="#">{{ trans('Eliminar') }}</a></li>
                     <li><a href="#">{{ trans('Asociar Insitucion') }}</a></li>
                      <li><a href="#">{{ trans('Consultar Concenios') }}</a></li>

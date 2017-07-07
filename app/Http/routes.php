@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
     
 Route::resource('Convenio','ConveniosController');
+
+//Route::get('')
+Route::get('Convenio/{id}/destroy',['uses'=>'ConveniosController@destroy','as'=>'destroyConvenio.destroy']); /*Asignaremos esta ruta para la eliminacion*/

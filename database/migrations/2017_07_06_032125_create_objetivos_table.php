@@ -21,7 +21,7 @@ class CreateObjetivosTable extends Migration
            
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('id_con')->references('id_con')->on('convenios')->onDelete('cascade');
+            $table->foreign('id_con')->references('id')->on('convenios')->onDelete('cascade');/*Ver si esto puede generar algun problema a las migraciones*/
             });
     }
 

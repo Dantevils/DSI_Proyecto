@@ -42,10 +42,10 @@
 							{!! Form::label('numero_con', 'Ingrese Numero de convenio') !!}
 							{!! Form::text('numero_con',null,['class'=>'form-control','placeholder'=>'numero','required']) !!}
 						</div>
-						<div class="form-group">
+						{{-- <div class="form-group">
 							{!! Form::label('modalidad_con', 'Ingrese la modalidad de convenio') !!}
 							{!! Form::text('modalidad_con',null,['class'=>'form-control','placeholder'=>'modalidad','required']) !!}
-						</div>
+						</div>--}}
 						<div class="form-group">
 							{!! Form::label('fechaini_con', 'Ingrese la fecha de inicio del convenio') !!}
 							{!! Form::date('fechaini_con',null,['class'=>'form-control','placeholder'=>'fecha de inicio','required']) !!}
