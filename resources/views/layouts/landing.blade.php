@@ -111,7 +111,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <b>Desarrolladores</b></a>. {{ 'Dantevils' }}.<br/>
+            <b>Desarrolladores</b></a>. {{ 'Dantevils','Omar Vega','Brandon Veloso','Jacob Goldemberg','Camilo Sanguenza','Francisca Martinez','Paula Silva' }}.<br/>
         </p>
     </div>
 </div>
