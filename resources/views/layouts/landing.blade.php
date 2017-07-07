@@ -80,7 +80,17 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 </div>
 
 
-
+<section id="desc" name="desc"></section></section>
+<div id="footerwrap">
+    <div class="container">
+        <h3>{{ "Una Breve Descripción" }}</h3>
+        <p>
+            Esta corresponde a una página diseñada para la Universidad de Macondo, <br/>
+            que le permitirá realizar un seguimiento a la gestión de los convenios <br/>
+            de la Dirección de Relaciones Institucionales.
+        </p>
+    </div>
+</div>
 
 <section id="contact" name="contact"></section>
 <div id="footerwrap">
