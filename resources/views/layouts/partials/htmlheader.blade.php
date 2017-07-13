@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
 
 
-
+    <!--Habilitacion de dataTables-->
     <link rel="stylesheet" href="{{ asset('/plugins/datatables/dataTables.bootstrap.css') }}">
 
 </head>
