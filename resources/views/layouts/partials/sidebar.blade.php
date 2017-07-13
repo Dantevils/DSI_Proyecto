@@ -39,7 +39,6 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
                     <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
-                    <li><a href="#">{{ trans('Eliminar') }}</a></li>
                     <li><a href="#">{{ trans('Asociar Insitucion') }}</a></li>
                      <li><a href="#">{{ trans('Consultar Concenios') }}</a></li>
                       <li><a href="#">{{ trans('Consultar Cordinadores') }}</a></li>
@@ -62,8 +61,8 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-graduation-cap'></i> <span>{{ trans('Insituciones') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
-                    <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li> 
+                    <li><a href="{{ route('Institucion.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Institucion.index')}}">{{ trans('Modificar') }}</a></li> 
                     </ul>
                     </li>
 
@@ -71,9 +70,8 @@
             <li class="treeview">
                 <a href="#"><i class='fa fa-cubes'></i> <span>{{ trans('Objetivos') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
-                    <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
-                    <li><a href="#">{{ trans('Eliminar') }}</a></li>                    
+                    <li><a href="{{ route('Objetivo.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Objetivo.index')}}">{{ trans('Modificar') }}</a></li>                  
                 </ul>
             </li>
 

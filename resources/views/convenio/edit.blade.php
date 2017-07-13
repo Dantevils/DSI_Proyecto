@@ -7,6 +7,8 @@
  --}}
 
 
+@section('Padre', 'Convenios')
+@section('Hijo', 'Editar')
 @section('main-content')
 	<div class="container spark-screen">
 		<div class="row">

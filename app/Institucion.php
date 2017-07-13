@@ -8,6 +8,6 @@ class Institucion extends Model
 {
     //
      protected $fillable = [
-        'id_inst', 'nombre_inst', 'descripcion_inst','id_con',
+        'id', 'nombre_inst', 'descripcion_inst','id_con',
     ];
 }

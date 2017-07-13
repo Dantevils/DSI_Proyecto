@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Objetivo;
+use App\Convenio;
+
 
 class ObjetivoController extends Controller
 {
@@ -15,7 +18,9 @@ class ObjetivoController extends Controller
      */
     public function index()
     {
-        //
+        //}
+        $var = Objetivo::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
+        return view('convenio.objetivo.index',compact('var'));
     }
 
     /**
@@ -26,6 +31,12 @@ class ObjetivoController extends Controller
     public function create()
     {
         //
+        //
+        //Pasamos los convenios
+        //$varConvenio = Convenio::lists('id'); /*nombre_con*/
+        $varConvenio = Convenio::all();
+        //dd($varConvenio);
+        return view('convenio.objetivo.create',compact('varConvenio')); /*Llamamos a la vista que se encargara de crear*/
     }
 
     /**
@@ -37,6 +48,9 @@ class ObjetivoController extends Controller
     public function store(Request $request)
     {
         //
+          $var = new Objetivo($request->all());
+        $var->save();
+        return redirect()->route('Objetivo.index');
     }
 
     /**
@@ -59,6 +73,8 @@ class ObjetivoController extends Controller
     public function edit($id)
     {
         //
+            $varObjetivo = Objetivo::findOrFail($id);
+        return view('convenio.objetivo.edit',array('varObjetivo'=>$varObjetivo));
     }
 
     /**
@@ -71,6 +87,10 @@ class ObjetivoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $varObjetivo = Objetivo::find($id);
+        $varObjetivo->fill($request->all());
+        $varObjetivo->save();
+        return redirect()->route('Objetivo.index');/*Redirecionamos a ruta*/
     }
 
     /**
@@ -82,5 +102,8 @@ class ObjetivoController extends Controller
     public function destroy($id)
     {
         //
+        $varObjetivo = Objetivo::findOrFail($id);
+        $varObjetivo->delete();
+        return redirect()->route('Objetivo.index');
     }
 }

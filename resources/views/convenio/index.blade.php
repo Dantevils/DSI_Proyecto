@@ -5,6 +5,8 @@
 	Creacion de Convenios
 @endsection
  --}}
+@section('Padre', 'Convenios')
+@section('Hijo', 'Listado')
 
 
 @section('main-content')

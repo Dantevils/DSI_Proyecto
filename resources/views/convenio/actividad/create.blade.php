@@ -2,6 +2,8 @@
 @extends('layouts.app')
 
 
+@section('Padre', 'Actividades')
+@section('Hijo', 'Crear')
 
 @section('main-content')
 	<div class="container spark-screen">

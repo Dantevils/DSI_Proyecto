@@ -27,3 +27,13 @@ Route::get('Convenio/{id}/destroy',['uses'=>'ConveniosController@destroy','as'=>
 Route::resource('Actividad','ActividadController');
 
 Route::get('Actividad/{id}/destroy',['uses'=>'ActividadController@destroy','as'=>'destroyActividad.destroy']); /*Asignaremos esta ruta para la eliminacion*/
+
+/***********************************************/
+/*Rutas para Instituciones*/
+Route::resource('Institucion','InstitucionController');
+Route::get('Institucion/{id}/destroy',['uses'=>'InstitucionController@destroy','as'=>'destroyInstitucion.destroy']); /*Asignaremos esta ruta para la eliminacion*/
+
+/***********************************************/
+/*Rutas para Objetivos*/
+Route::resource('Objetivo','ObjetivoController');
+Route::get('Objetivo/{id}/destroy',['uses'=>'ObjetivoController@destroy','as'=>'destroyObjetivo.destroy']); /*Asignaremos esta ruta para la eliminacion*/

@@ -8,6 +8,6 @@ class Objetivo extends Model
 {
     //
        protected $fillable = [
-        'id_obj', 'descripcion_obj', 'id_con',
+        'id', 'descripcion_obj', 'id_con',
     ];
 }

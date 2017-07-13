@@ -14,7 +14,7 @@ class CreateInstitucionTable extends Migration
     {
         //
         Schema::create('institucions', function (Blueprint $table) {
-            $table->increments('id_inst');/*Identificador de institucion unico*/
+            $table->increments('id');/*Identificador de institucion unico*/
             $table->string('nombre_inst');/*Nombre de institucion*/
             $table->string('descripcion_inst');/*Descripcion de la institucion*/
             $table->integer('id_con')->unsigned();/*clave foranea de convenio*/

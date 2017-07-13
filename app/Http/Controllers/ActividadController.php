@@ -25,7 +25,7 @@ class ActividadController extends Controller
      //   dd($var);
         $var = Actividad::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
         return view('convenio.actividad.index',compact('var'));
-        return view('convenio.actividad.index');/*Redirecionamos a Vista */
+        //return view('convenio.actividad.index');/*Redirecionamos a Vista */
     }
 
     /**
