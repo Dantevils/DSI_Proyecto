@@ -5,9 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+
+use App\Actividad; /*Modelo de Actividad*/
 use App\Convenio;
 
-class ConveniosController extends Controller
+
+
+class ActividadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +21,11 @@ class ConveniosController extends Controller
     public function index()
     {
         //
-         //Este metodo lo utilizaremos para mostrar un listado de los convenios.
-        $var = Convenio::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
-        return view('convenio.index',compact('var'));
+       // $var = Actividad::all();
+     //   dd($var);
+        $var = Actividad::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
+        return view('convenio.actividad.index',compact('var'));
+        return view('convenio.actividad.index');/*Redirecionamos a Vista */
     }
 
     /**
@@ -29,8 +35,11 @@ class ConveniosController extends Controller
      */
     public function create()
     {
-        //
-          return view('convenio.create'); /*Llamamos a la vista que se encargara de crear*/
+        //Pasamos los convenios
+        //$varConvenio = Convenio::lists('id'); /*nombre_con*/
+        $varConvenio = Convenio::all();
+        //dd($varConvenio);
+        return view('convenio.actividad.create',compact('varConvenio')); /*Llamamos a la vista que se encargara de crear*/
     }
 
     /**
@@ -43,10 +52,9 @@ class ConveniosController extends Controller
     {
         //
         //dd($request);
-        dd('hola cargo');
-         $var = new Convenio($request->all());
+        $var = new Actividad($request->all());
         $var->save();
-        return redirect()->route('Convenio.index');
+        return redirect()->route('Actividad.index');
     }
 
     /**
@@ -69,8 +77,8 @@ class ConveniosController extends Controller
     public function edit($id)
     {
         //
-        $varConvenio = Convenio::findOrFail($id);
-        return view('convenio.edit',array('varConvenio'=>$varConvenio));
+        $varActividad = Actividad::findOrFail($id);
+        return view('convenio.actividad.edit',array('varActividad'=>$varActividad));
     }
 
     /**
@@ -83,10 +91,12 @@ class ConveniosController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $varConvenio = Convenio::find($id);
-        $varConvenio->fill($request->all());
-        $varConvenio->save();
-        return redirect()->route('Convenio.index');
+        $varActividad = Actividad::find($id);
+        $varActividad->fill($request->all());
+        $varActividad->save();
+        return redirect()->route('Actividad.index');/*Redirecionamos a ruta*/
+
+
     }
 
     /**
@@ -98,9 +108,8 @@ class ConveniosController extends Controller
     public function destroy($id)
     {
         //
-        $varConvenio = Convenio::findOrFail($id);
-        $varConvenio->delete();
-        return redirect()->route('Convenio.index');
+        $varActividad = Actividad::findOrFail($id);
+        $varActividad->delete();
+        return redirect()->route('Actividad.index');
     }
-
 }

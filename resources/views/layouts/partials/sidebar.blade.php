@@ -31,11 +31,11 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">{{ trans('adminlte_lang::message.header') }}</li> <!--Perfil de usuario-->
+            <li class="header">{{ Auth::user()->tipo }}</li> <!--Perfil de usuario-->
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('Home') }}</span></a></li>
             <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('Convenios') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-book'></i> <span>{{ trans('Convenios') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
                     <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
@@ -43,23 +43,49 @@
                     <li><a href="#">{{ trans('Asociar Insitucion') }}</a></li>
                      <li><a href="#">{{ trans('Consultar Concenios') }}</a></li>
                       <li><a href="#">{{ trans('Consultar Cordinadores') }}</a></li>
-                    
+                      <!--Solo para el administrador-->
+                        <li><a href="#">{{ trans('Permisos de usuarios') }}</a></li>
+                  
                 </ul>
             </li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Parámetros') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Act.Convenios') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Institucion') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Documentos') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Publicacion') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Consultas') }}</span></a></li>
-            <li><a href="#"><i class='fa fa-link'></i> <span>{{ trans('Gestion') }}</span></a></li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.multilevel') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <!--CRUD Actividades-->
+             <li class="treeview">
+                <a href="#"><i class='fa fa-calendar'></i> <span>{{ trans('Actividades') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
+                    <li><a href="{{ route('Actividad.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Actividad.index')}}">{{ trans('Modificar') }}</a></li> <!--Editar y eliminar-->
+            </ul>
+            </li>
+
+
+                <!--CRUD Instituciones-->
+            <li class="treeview">
+                <a href="#"><i class='fa fa-graduation-cap'></i> <span>{{ trans('Insituciones') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li> 
+                    </ul>
+                    </li>
+
+                    <!--CRUD Objetivos-->
+            <li class="treeview">
+                <a href="#"><i class='fa fa-cubes'></i> <span>{{ trans('Objetivos') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
+                    <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
+                    <li><a href="#">{{ trans('Eliminar') }}</a></li>                    
                 </ul>
             </li>
+
+           
+            <!--Otros modulos de que no se desarrollaron-->
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Parámetros') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Act.Convenios') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Institucion') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Documentos') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Publicacion') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Consultas') }}</span></a></li>
+            <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Gestion') }}</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

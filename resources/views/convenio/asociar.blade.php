@@ -1,3 +1,4 @@
+<!--Vista de Asociar Convenios-->
 @extends('layouts.app')
 
 {{-- -
@@ -12,10 +13,10 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="panel panel-default">
-					<div class="panel-heading">Edicion  de Convenios</div>
+					<div class="panel-heading">Asociar Institucion</div>
 
 					<div class="panel-body">
-
+{{-- 
 
 						{!! Form::model($varConvenio,['route'=>['Convenio.update',$varConvenio],'method'=>'PUT','class'=>'form-horizontal']) !!}
 
@@ -54,7 +55,7 @@
 							{!! Form::label('modalidad_con', 'Ingrese la modalidad de convenio') !!}
 							{!! Form::text('modalidad_con',$varConvenio->modalidad_con,['class'=>'form-control','placeholder'=>'modalidad','required']) !!}
 						</div>
-						 --}}
+						 -}}
 						<div class="form-group">
 						{!! Form::label('fechini_con', 'Ingrese la fecha de inicio del convenio') !!}
 						     <div class="input-group date">
@@ -86,7 +87,7 @@
 						</div>
 						{!! Form::close() !!}
 
-					
+					- --}}
 						
 					</div>
 				</div>

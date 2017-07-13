@@ -14,7 +14,7 @@ class CreateObjetivosTable extends Migration
     {
         //
 
-                  Schema::create('objetivos', function (Blueprint $table) {
+            Schema::create('objetivos', function (Blueprint $table) {
             $table->increments('id_obj');/*Identificador de institucion unico*/
             $table->string('descripcion_obj');/*Nombre de institucion*/
             $table->integer('id_con')->unsigned();/*clave foranea de convenio*/

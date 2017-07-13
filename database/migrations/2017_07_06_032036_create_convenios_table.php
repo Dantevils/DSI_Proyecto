@@ -23,8 +23,8 @@ class CreateConveniosTable extends Migration
             $table->string('nombre_con');/*Nombre de convenio*/
             $table->string('descripcion_con');/*Descripcion de convenio*/
             $table->string('numero_con');/*Numero de decreto convenio*/
-            $table->time('fechini_con');
-            $table->time('fechter_con');
+            $table->date('fechini_con');
+            $table->date('fechter_con');
            
             $table->rememberToken();
             $table->timestamps();

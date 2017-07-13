@@ -13,7 +13,7 @@ class CreateInstitucionTable extends Migration
     public function up()
     {
         //
-        Schema::create('instituciones', function (Blueprint $table) {
+        Schema::create('institucions', function (Blueprint $table) {
             $table->increments('id_inst');/*Identificador de institucion unico*/
             $table->string('nombre_inst');/*Nombre de institucion*/
             $table->string('descripcion_inst');/*Descripcion de la institucion*/
@@ -33,7 +33,7 @@ class CreateInstitucionTable extends Migration
     public function down()
     {
         // 
-        Schema::drop('instituciones');
+        Schema::drop('institucions');
           
     }
 }
