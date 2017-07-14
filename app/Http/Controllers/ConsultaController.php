@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Convenio;
+use App\Actividad;
+use App\Institucion;
+use App\Objetivo;
+use App\User;
+use Illuminate\Support\Facades\DB;
 
-class ConveniosController extends Controller
+class ConsultaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +22,8 @@ class ConveniosController extends Controller
     public function index()
     {
         //
-         //Este metodo lo utilizaremos para mostrar un listado de los convenios.
         $var = Convenio::orderBy('id','ASC')->paginate(10); //Veamos que convine si mostrar el ultimo o el primero
-        return view('convenio.index',compact('var'));
+        return view('convenio.convenios',compact('var'));
     }
 
     /**
@@ -30,7 +34,6 @@ class ConveniosController extends Controller
     public function create()
     {
         //
-          return view('convenio.create'); /*Llamamos a la vista que se encargara de crear*/
     }
 
     /**
@@ -42,11 +45,6 @@ class ConveniosController extends Controller
     public function store(Request $request)
     {
         //
-        //dd($request);
-        dd('hola cargo');
-         $var = new Convenio($request->all());
-        $var->save();
-        return redirect()->route('Convenio.index');
     }
 
     /**
@@ -58,8 +56,19 @@ class ConveniosController extends Controller
     public function show($id)
     {
         
+        $varConvenio = Convenio::findOrFail($id);
+        $varActividad = DB::table('actividads')->where('id_ac',$id)->get();
+        $varInstitucion = DB::table('institucions')->where('id_con',$id)->get();
+        $varObjetivo = DB::table('objetivos')->where('id_con',$id)->get();
+       
+        //$varUser = User::findOrFail($id);
+
+
+        return view('convenio.showConvenio',array('varConvenio'=>$varConvenio , 'varActividad'=>$varActividad , 'varInstitucion'=>$varInstitucion , 'varObjetivo'=>$varObjetivo));
+
 
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -69,8 +78,6 @@ class ConveniosController extends Controller
     public function edit($id)
     {
         //
-        $varConvenio = Convenio::findOrFail($id);
-        return view('convenio.edit',array('varConvenio'=>$varConvenio));
     }
 
     /**
@@ -83,10 +90,6 @@ class ConveniosController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $varConvenio = Convenio::find($id);
-        $varConvenio->fill($request->all());
-        $varConvenio->save();
-        return redirect()->route('Convenio.index');
     }
 
     /**
@@ -98,11 +101,5 @@ class ConveniosController extends Controller
     public function destroy($id)
     {
         //
-        $varConvenio = Convenio::findOrFail($id);
-        $varConvenio->delete();
-        return redirect()->route('Convenio.index');
     }
-
-   
-
 }

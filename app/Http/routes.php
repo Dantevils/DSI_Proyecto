@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-
-
-});
+Route::get('/', function () {return view('welcome');});
 /************************************************/
 /*Rutas para Convenios*/
 Route::resource('Convenio','ConveniosController');
@@ -37,3 +33,9 @@ Route::get('Institucion/{id}/destroy',['uses'=>'InstitucionController@destroy','
 /*Rutas para Objetivos*/
 Route::resource('Objetivo','ObjetivoController');
 Route::get('Objetivo/{id}/destroy',['uses'=>'ObjetivoController@destroy','as'=>'destroyObjetivo.destroy']); /*Asignaremos esta ruta para la eliminacion*/
+
+
+/***********************************************/
+/*Rutas para Consultas*/
+Route::resource('Consulta','ConsultaController');
+Route::resource('Cordinador','CordinadorController');

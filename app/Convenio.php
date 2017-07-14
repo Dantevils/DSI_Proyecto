@@ -8,7 +8,7 @@ class Convenio extends Model
 {
     //
      protected $fillable = [
-        'id', 'tipo_con', 'area_con','estado_con','nombre_con','descripcion_con','numero_con','modalidad_con','fechini_con','fechter_con',
+        'id', 'tipo_con','id_cord', 'area_con','estado_con','nombre_con','descripcion_con','numero_con','modalidad_con','fechini_con','fechter_con',
         ];
 
 }

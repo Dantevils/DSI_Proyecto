@@ -39,11 +39,11 @@
                 <ul class="treeview-menu">
                     <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
                     <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
-                    <li><a href="#">{{ trans('Asociar Insitucion') }}</a></li>
-                     <li><a href="#">{{ trans('Consultar Concenios') }}</a></li>
-                      <li><a href="#">{{ trans('Consultar Cordinadores') }}</a></li>
+                    {{-- <li><a href="">{{ trans('Asociar Insitucion') }}</a></li> --}}
+                    <li><a href="{{ route('Consulta.index') }}">{{ trans('Consultar Convenios') }}</a></li>   
+                      <li><a href="">{{ trans('Consultar Cordinadores') }}</a></li><!--No terminada-->
                       <!--Solo para el administrador-->
-                        <li><a href="#">{{ trans('Permisos de usuarios') }}</a></li>
+                        <li><a href="{{ route('Cordinador.index') }}">{{ trans('Permisos de usuarios') }}</a></li>
                   
                 </ul>
             </li>

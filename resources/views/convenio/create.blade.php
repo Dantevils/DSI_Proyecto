@@ -70,7 +70,7 @@
 
 						<div class="form-group">
 							{!! Form::label('descripcion_con', 'Ingrese Descripcion de convenio') !!}
-							{!! Form::text('descripcion_con',null,['class'=>'form-control','placeholder'=>'descripcion','required']) !!}
+							{!! Form::textarea('descripcion_con',null,['class'=>'form-control','placeholder'=>'descripcion','required']) !!}
 						</div>
 
 
