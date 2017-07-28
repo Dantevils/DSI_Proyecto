@@ -1,6 +1,10 @@
 <!-- Main Header -->
 <header class="main-header">
 
+<title> 
+    <link rel="icon" href="{!! asset('imag/favicon.ico') !!}"/>
+</title>
+
     <!-- Logo -->
     <a href="{{ url('/home') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->

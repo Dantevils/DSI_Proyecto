@@ -34,20 +34,29 @@
             <li class="header">{{ Auth::user()->tipo }}</li> <!--Perfil de usuario-->
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-home'></i> <span>{{ trans('Home') }}</span></a></li>
+
+            
             <li class="treeview">
                 <a href="#"><i class='fa fa-book'></i> <span>{{ trans('Convenios') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
+                 @if (Auth::user()->tipo == 'administrador' or Auth::user()->tipo == 'cordinador' )
                     <li><a href="{{ route('Convenio.create')}}">{{ trans('Registrar') }}</a></li>
                     <li><a href="{{ route('Convenio.index')}}">{{ trans('Modificar') }}</a></li>
+                 @endif
                     {{-- <li><a href="">{{ trans('Asociar Insitucion') }}</a></li> --}}
                     <li><a href="{{ route('Consulta.index') }}">{{ trans('Consultar Convenios') }}</a></li>   
                       <li><a href="">{{ trans('Consultar Cordinadores') }}</a></li><!--No terminada-->
                       <!--Solo para el administrador-->
+                      @if (Auth::user()->tipo == 'administrador')
                         <li><a href="{{ route('Cordinador.index') }}">{{ trans('Permisos de usuarios') }}</a></li>
+                        @endif
                   
                 </ul>
             </li>
                 <!--CRUD Actividades-->
+                @if (Auth::user()->tipo == 'administrador' or Auth::user()->tipo == 'cordinador' )
+                    {{-- expr --}}
+                
              <li class="treeview">
                 <a href="#"><i class='fa fa-calendar'></i> <span>{{ trans('Actividades') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -56,7 +65,7 @@
             </ul>
             </li>
 
-
+               
                 <!--CRUD Instituciones-->
             <li class="treeview">
                 <a href="#"><i class='fa fa-graduation-cap'></i> <span>{{ trans('Insituciones') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
@@ -75,7 +84,7 @@
                 </ul>
             </li>
 
-           
+             @endif
             <!--Otros modulos de que no se desarrollaron-->
             <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Parámetros') }}</span></a></li>
             <li><a href="#"><i class='fa fa-close'></i> <span>{{ trans('Act.Convenios') }}</span></a></li>

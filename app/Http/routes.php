@@ -39,3 +39,9 @@ Route::get('Objetivo/{id}/destroy',['uses'=>'ObjetivoController@destroy','as'=>'
 /*Rutas para Consultas*/
 Route::resource('Consulta','ConsultaController');
 Route::resource('Cordinador','CordinadorController');
+
+/*Ruta del controlador de PDF*/
+Route::get('pdf/{id}', 'PdfController@invoice');
+
+Route::get('pdf/{id}/invoice',['uses'=>'PdfController@invoice','as'=>'pdf.print']); /*Asignaremos esta ruta para la eliminacion*/
+

@@ -61,12 +61,14 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
                     <li><a href="{{ url('/login') }}">{{'Iniciar seccion'}}</a></li>
                     <li><a href="{{ url('/register') }}">{{ 'Registrar' }}</a></li>
                 @else
-                    <li><a href="/home">{{ Auth::user()->name }}</a></li>
+                    <li><a href="{{ url('/home') }}">{{ Auth::user()->name }}</a></li>
                 @endif
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </div>
+
+<!-- route('Institucion.create')  -->
 
 
 
@@ -84,8 +86,8 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
         <div class="col-lg-5">
             <h3>{{ "Direccion" }}</h3>
             <p>
-                Avenida samuel bambach,<br/>
-                Coelemu,<br/>
+                Avenida Los acracios,<br/>
+                Concepcion,<br/>
                 254<br/>
                 Concepcion
             </p>
@@ -94,9 +96,9 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
             <h3>{{ "Contacto" }}</h3>
             <p>
                 Fono:  (56-42) 2970367,<br/>
-                Rut:  77.834.330-4,<br/>
-                Guiro:  Obras de ingenierías<br/>
-                Representante legal:  Paola Lamas<br/>
+                Rut:  77.934.s30-4,<br/>
+                Direccion de Relaciones Institucionales de la<br/>
+                Universidad de Macondo<br/>
             </p>
         </div>
 
@@ -107,7 +109,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
 <div id="c">
     <div class="container">
         <p>
-            <b>Desarrolladores</b></a>. {{ 'Dantevils' }}.<br/>
+            <b>Desarrolladores</b></a>. {{ 'Omar Vegas && Alfredo Pérez' }}.<br/>
         </p>
     </div>
 </div>

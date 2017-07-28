@@ -43,7 +43,7 @@ class ConveniosController extends Controller
     {
         //
         //dd($request);
-        dd('hola cargo');
+        //dd('hola cargo');
          $var = new Convenio($request->all());
         $var->save();
         return redirect()->route('Convenio.index');

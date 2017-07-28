@@ -51,8 +51,10 @@ class ActividadController extends Controller
     public function store(Request $request)
     {
         //
-        //dd($request);
+       // dd($request);
         $var = new Actividad($request->all());
+        $var2 = $var->id_ac+1; 
+        $var->id_ac = $var2;
         $var->save();
         return redirect()->route('Actividad.index');
     }

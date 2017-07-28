@@ -20,7 +20,7 @@
 						<!--Convenio--> <!--Revisar el deface en el select-->
 						<div class="form-group col-sm-4">
 						{!! Form::label('id_con', 'Asignar a convenio') !!}
-	 				    {!!Form::select('id_con', $varConvenio->pluck('tipo_con'), $varConvenio->pluck('id'),['class' => 'select form-control', 'required'])!!} 
+	 				    {!!Form::select('id_con', $varConvenio->pluck('nombre_con'), $varConvenio->pluck('id'),['class' => 'select form-control', 'required'])!!} 
   						</div> 
 
 				

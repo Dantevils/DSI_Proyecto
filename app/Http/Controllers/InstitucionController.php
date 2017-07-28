@@ -52,6 +52,8 @@ class InstitucionController extends Controller
         //
         //dd($request);
         $var = new Institucion($request->all());
+        $var2 = $var->id_con+1; 
+        $var->id_con = $var2;
         $var->save();
         return redirect()->route('Institucion.index');
     }

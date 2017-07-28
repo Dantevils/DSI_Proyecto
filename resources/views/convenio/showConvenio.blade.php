@@ -12,7 +12,9 @@
 				<div class="box box-solid">
 		           <div class="box-header with-border">
 		             <i class="fa fa-book"></i>
-		              <h3 class="box-title">Descipcion del Convenio N°.{{$varConvenio->id }}</h3>
+		              <h3 class="box-title">Descipcion del Convenio N°.{{$varConvenio->id }}     
+ <a href="{{route('pdf.print',$varConvenio->id)}}" class="btn btn-danger"> PDF <span class="fa fa-file-pdf-o col"></span></a>
+		              </h3>
 		            	</div>
 			            	<div class="box-body col-md-6">
 			              		<dl>
@@ -72,6 +74,8 @@
 
 				                </dl>
             				</div>
+
+            				
           				</div>
 					</div>
 				</div>

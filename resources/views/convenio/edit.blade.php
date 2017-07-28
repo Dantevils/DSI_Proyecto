@@ -49,7 +49,7 @@
 						
 						<div class="form-group">
 							{!! Form::label('numero_con', 'Ingrese Numero de convenio') !!}
-							{!! Form::text('numero_con',$varConvenio->nombre_con,['class'=>'form-control','placeholder'=>'numero','required']) !!}
+							{!! Form::text('numero_con',$varConvenio->numero_con,['class'=>'form-control','placeholder'=>'numero','required']) !!}
 						</div>
 					 	
 					 	{{-- <div class="form-group">

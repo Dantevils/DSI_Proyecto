@@ -161,6 +161,10 @@ return [
         /*Laravel Colective*/
         Collective\Html\HtmlServiceProvider::class,
 
+        /*PDF Generator Plugin*/
+
+        Barryvdh\DomPDF\ServiceProvider::class,
+
 
     ],
 
@@ -213,6 +217,10 @@ return [
         /*Laravel Colective*/
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+        /*PDF Plugnun Alias*/
+            
+'PDF' => 'Barryvdh\DomPDF\Facade',
     ],
 
 ];

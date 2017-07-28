@@ -49,6 +49,8 @@ class ObjetivoController extends Controller
     {
         //
           $var = new Objetivo($request->all());
+          $var2 = $var->id_con+1; 
+        $var->id_con = $var2;
         $var->save();
         return redirect()->route('Objetivo.index');
     }

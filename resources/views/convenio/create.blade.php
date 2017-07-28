@@ -20,13 +20,13 @@
 						<!--Tipo de Convenio-->
 						<div class="form-group col-sm-4">
 							{!! Form::label('tipo_con', 'Tipo de convenio') !!}
-						{!! Form::select('tipo_con', ['Marco', 'Especifico'], null, ['class'=>'select form-control','required']) !!}
+						    {!! Form::text('tipo_con',null,['class'=>'form-control','placeholder'=>'Marco, especifico','required']) !!}
 						</div>
 				       	<div class="col-sm-4"></div>
 				        	<!--Tipo Area-->			
 						<div class="form-group col-sm-4">
 							{!! Form::label('area_con', 'Tipo de Area') !!}
-						{!! Form::select('area_con', ['Area1', 'Area2','Area3','Area4'], null, ['class'=>'select form-control','required']) !!}
+						    {!! Form::text('area_con',null,['class'=>'form-control','placeholder'=>'Desrrollo','required']) !!}
 						</div>
 				        
 				        <!--Nombre de Convenio-->
@@ -65,7 +65,7 @@
 						<!--Tipo de estado-->
 						<div class="form-group">
 							{!! Form::label('estado_con', 'Ingrese Tipo de estado') !!}
-							{!! Form::select('estado_con', ['Estado1', 'Estado2','Estado3','Estado4'], null, ['class'=>'select form-control','required']) !!}
+							{!! Form::text('estado_con',null,['class'=>'form-control','placeholder'=>'Actividado o Desactivado','required']) !!}
 						</div>
 
 						<div class="form-group">
